@@ -1,0 +1,143 @@
+:root {
+  color-scheme: light;
+  --ink: #202b28;
+  --muted-ink: #52615c;
+  --paper: #f4f6f1;
+  --forest: #174a3a;
+  --leaf: #d8e9dd;
+  --copper: #b75b36;
+  --line: #cbd5cd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  max-width: 80rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+header {
+  padding: 1.5rem max(1.25rem, calc((100% - 68rem) / 2));
+  background: var(--forest);
+  color: #ffbdb8;
+  border-bottom: 5px solid var(--copper);
+}
+
+header h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.7rem, 4vw, 2.35rem);
+  line-height: 1.15;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: #ffbdb8;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+nav a:visited {
+  color: #ffbdb8;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #ffc5c0;
+}
+
+.primary-nav {
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgb(255 189 184 / 55%);
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+
+.secondary-nav {
+  padding-top: 0.7rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.secondary-nav a {
+  color: #ffbdb8;
+}
+
+.secondary-nav a:visited {
+  color: #ffbdb8;
+}
+
+main {
+  width: min(100% - 2.5rem, 68rem);
+  flex: 1;
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+main h2 {
+  margin-top: 0;
+  color: var(--forest);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  line-height: 1.2;
+}
+
+main p {
+  max-width: 68ch;
+}
+
+main a {
+  color: #8c3d25;
+}
+
+main a:visited {
+  color: #8c3d25;
+}
+
+.course-illustration {
+  display: block;
+  width: min(100%, 38rem);
+  height: auto;
+  margin-top: 1.5rem;
+  border: 1px solid var(--line);
+}
+
+footer {
+  padding: 1rem 1.25rem;
+  background: #e4ebe5;
+  color: var(--muted-ink);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 38rem) {
+  header {
+    padding: 1.25rem;
+  }
+
+  main {
+    width: min(100% - 2rem, 68rem);
+    padding-top: 1.75rem;
+  }
+}

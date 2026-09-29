@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" aria-labelledby="title description">
+  <title id="title">A curious llama among course notes</title>
+  <desc id="description">An illustrated llama looks over a stack of green, copper, and cream course books.</desc>
+  <rect width="760" height="340" fill="#e5eee7"/>
+  <path d="M0 268h760v72H0z" fill="#c2d6c8"/>
+  <circle cx="650" cy="72" r="34" fill="#d6a277"/>
+  <path d="M80 267c12-53 56-85 114-85s106 32 117 85" fill="#174a3a"/>
+  <path d="M142 205c-18-37-26-89-20-139 2-17 13-29 25-25 13 4 13 23 12 40l-1 48c12-11 30-13 47-6 18 7 29 24 31 43l9 71h-99z" fill="#f2d8bb" stroke="#815d49" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M124 69 105 29c-3-7 4-13 11-8l27 27M158 66l24-38c4-7 13-3 12 5l-5 46" fill="#d7b293" stroke="#815d49" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="185" cy="117" rx="5" ry="7" fill="#202b28"/>
+  <path d="M210 138c-10 10-21 10-31 4" fill="none" stroke="#815d49" stroke-width="4" stroke-linecap="round"/>
+  <path d="M397 267h243v-92H397z" fill="#174a3a"/>
+  <path d="M424 175h193v-71H424z" fill="#f2d8bb" stroke="#815d49" stroke-width="4"/>
+  <path d="M453 104h165V49H453z" fill="#b75b36"/>
+  <path d="M459 125h112M459 146h91M431 196h167M431 220h132" stroke="#c2d6c8" stroke-width="7" stroke-linecap="round"/>
+  <path d="M358 267c9-35 29-51 50-51h29v51" fill="#b75b36"/>
+  <path d="M364 243h43M364 258h43" stroke="#f2d8bb" stroke-width="5"/>
+</svg>

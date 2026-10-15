@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly field guide to Brawlhalla, its Legends, match modes, arenas, and basic play strategies.">
+  <title>Brawlhalla | A Player's Field Guide</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f5f1e9;
+      --muted: #c5c2cd;
+      --paper: #171a2a;
+      --paper-deep: #252a3c;
+      --plum: #101321;
+      --teal: #55d6d2;
+      --coral: #ffb844;
+      --line: #444b61;
+      --white: #242a3c;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-width: 19rem;
+      min-height: 100vh;
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 88% 8%, rgb(85 214 210 / 13%), transparent 24rem),
+        var(--paper);
+      color: var(--ink);
+    }
+
+    a {
+      color: var(--teal);
+      text-decoration-thickness: 0.12em;
+      text-underline-offset: 0.2em;
+    }
+
+    a:hover {
+      color: var(--coral);
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--coral);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .site-header {
+      padding: clamp(1.5rem, 5vw, 3.75rem) max(1.25rem, calc((100% - 70rem) / 2));
+      background: linear-gradient(125deg, #101321 15%, #292440 100%);
+      color: #f5f1e9;
+      border-bottom: 0.45rem solid var(--coral);
+    }
+
+    .eyebrow {
+      margin: 0 0 0.4rem;
+      color: var(--coral);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      line-height: 1.15;
+    }
+
+    h1 {
+      max-width: 16ch;
+      margin: 0;
+      font-size: clamp(2.5rem, 8vw, 5.25rem);
+      letter-spacing: -0.04em;
+    }
+
+    .tagline {
+      max-width: 48rem;
+      margin: 1rem 0 0;
+      color: #d7d9e4;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .section-nav {
+      max-width: 70rem;
+      margin: 0 auto;
+      padding: 1.1rem 1.25rem;
+    }
+
+    .section-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.75rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .section-nav a {
+      display: inline-block;
+      padding: 0.45rem 0.75rem;
+      border: 1px solid var(--line);
+      border-radius: 0.5rem;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 0.94rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 150ms ease, color 150ms ease, transform 150ms ease;
+    }
+
+    .section-nav a:hover,
+    .section-nav a[aria-current="page"] {
+      transform: translateY(-1px);
+      border-color: var(--coral);
+      background: var(--coral);
+      color: #181a26;
+    }
+
+    main {
+      width: min(100% - 2.5rem, 70rem);
+      min-height: 34rem;
+      margin: 0 auto;
+      padding: 1.6rem 0 4.5rem;
+    }
+
+    .guide-page {
+      padding: clamp(1.25rem, 4vw, 3rem);
+      border: 1px solid var(--line);
+      border-radius: 0.8rem;
+      background: rgb(36 42 60 / 92%);
+      box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 22%);
+      animation: arrive 220ms ease-out;
+    }
+
+    .guide-page[hidden] {
+      display: none;
+    }
+
+    @keyframes arrive {
+      from {
+        opacity: 0;
+        transform: translateY(0.4rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .page-label {
+      margin: 0 0 0.35rem;
+      color: var(--coral);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 1rem;
+      color: var(--coral);
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 0 0 0.5rem;
+      color: var(--teal);
+      font-size: 1.25rem;
+    }
+
+    .intro {
+      max-width: 66ch;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.7rem 0;
+    }
+
+    .note-card {
+      padding: 1.1rem 1.2rem;
+      border-left: 0.25rem solid var(--coral);
+      border-radius: 0.25rem 0.5rem 0.5rem 0.25rem;
+      background: var(--paper);
+    }
+
+    .note-card p,
+    .note-card ul,
+    .note-card ol {
+      margin: 0.35rem 0 0;
+    }
+
+    .note-card ul,
+    .note-card ol {
+      padding-left: 1.25rem;
+    }
+
+    li + li {
+      margin-top: 0.35rem;
+    }
+
+    figure {
+      max-width: 52rem;
+      margin: 2rem 0 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      background: var(--paper-deep);
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 8 / 5;
+      object-fit: cover;
+    }
+
+    .what-image {
+      aspect-ratio: 474 / 266;
+      object-fit: contain;
+      background: #101321;
+    }
+
+    .when-image {
+      aspect-ratio: 474 / 547;
+      object-fit: contain;
+      background: #101321;
+    }
+
+    .why-image {
+      aspect-ratio: 3 / 2;
+      object-fit: contain;
+      background: #101321;
+    }
+
+    figcaption {
+      padding: 0.9rem 1.1rem 1rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    figcaption p {
+      margin: 0.4rem 0 0;
+    }
+
+    figcaption em {
+      display: block;
+      color: var(--coral);
+      font-size: 0.88rem;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      max-width: 70rem;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      color: var(--teal);
+      font-size: 1.2rem;
+      letter-spacing: 0.3em;
+    }
+
+    .divider::before,
+    .divider::after {
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+      content: "";
+    }
+
+    .site-footer {
+      padding: 2rem 1.25rem;
+      background: var(--plum);
+      color: #f5f1e9;
+      text-align: center;
+    }
+
+    .site-footer p {
+      margin: 0.55rem 0;
+    }
+
+    .site-footer a {
+      color: var(--coral);
+    }
+
+    .validation-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
+
+    .validation-links a {
+      padding: 0.4rem 0.7rem;
+      border: 1px solid #60677b;
+      border-radius: 0.4rem;
+      text-decoration: none;
+    }
+
+    .validation-links a:hover {
+      background: var(--white);
+      color: var(--coral);
+    }
+
+    .skip-link {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      z-index: 1;
+      padding: 0.6rem 0.8rem;
+      transform: translateY(-160%);
+      border-radius: 0.3rem;
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 42rem) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        width: min(100% - 1.5rem, 70rem);
+        padding-top: 0.75rem;
+      }
+
+      .section-nav {
+        padding: 0.9rem 0.75rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <p class="eyebrow">A beginner's player guide</p>
+    <h1>Brawlhalla</h1>
+    <p class="tagline">Pick a Legend, master a weapon, and battle your way back onto the stage in this fast-paced platform fighter.</p>
+  </header>
+
+  <nav class="section-nav" aria-label="Brawlhalla guide pages">
+    <ul>
+      <li><a href="#what" aria-current="page">What</a></li>
+      <li><a href="#who">Who</a></li>
+      <li><a href="#when">When</a></li>
+      <li><a href="#where">Where</a></li>
+      <li><a href="#how">How</a></li>
+      <li><a href="#why">Why</a></li>
+      <li><a href="#ai-prompts">AI Prompts</a></li>
+    </ul>
+  </nav>
+
+  <div class="divider" aria-hidden="true">✦ ✦ ✦</div>
+
+  <main id="main-content">
+    <section class="guide-page" id="what" aria-labelledby="what-title">
+      <p class="page-label">Start here</p>
+      <h2 id="what-title" tabindex="-1">What is Brawlhalla?</h2>
+      <p class="intro">Brawlhalla is a free-to-play platform fighting game from Blue Mammoth Games. Players choose a Legend, fight on floating stages, and try to knock opponents off the arena. As damage builds, a fighter becomes easier to launch away.</p>
+      <div class="content-grid">
+        <article class="note-card">
+          <h3>Fight for the stage</h3>
+          <p>Move, jump, dodge, and attack while watching your position. A well-timed hit can send an opponent flying past the edge.</p>
+        </article>
+        <article class="note-card">
+          <h3>Choose your style</h3>
+          <p>Each Legend has a distinct look and a set of two weapon types. Pick up weapons during a match and adapt your attacks to the situation.</p>
+        </article>
+      </div>
+      <figure>
+        <img class="what-image" src="https://tse2.mm.bing.net/th/id/OIP.dR6PwPEjmmR8X_V22Nq2EAHaEK?r=0&amp;rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" width="474" height="266" alt="Brawlhalla promotional artwork with the game logo and several Legends in action">
+        <figcaption>
+          Brawlhalla promotional artwork featuring several Legends.
+          <p><em>Image supplied by the site author from Bing Images; this existing game artwork is not AI-generated.</em></p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="guide-page" id="who" aria-labelledby="who-title" hidden>
+      <p class="page-label">Legends and players</p>
+      <h2 id="who-title" tabindex="-1">Who can play?</h2>
+      <p class="intro">Anyone can jump into Brawlhalla. The roster of playable fighters is called the Legends; each one brings a different visual identity and combination of weapon types to the fight.</p>
+      <div class="content-grid">
+        <article class="note-card">
+          <h3>Find a Legend you enjoy</h3>
+          <p>Try different Legends in training and pay attention to their weapons, movement, and feel. Comfort and curiosity matter more than picking a so-called perfect main.</p>
+        </article>
+        <article class="note-card">
+          <h3>Play together</h3>
+          <p>Practice with friends, team up, or face other players. Matches are a chance to learn from different play styles, not only to chase a win.</p>
+        </article>
+      </div>
+      <figure>
+        <img src="https://cms.brawlhalla.com/c/uploads/2025/05/4be15f27-8189-40a5-9eef-a7d09f659f5f_rw_3840-2048x1365.jpg" width="2048" height="1365" alt="Players gathered at a Brawlhalla gaming event, playing matches at computer stations">
+        <figcaption>
+          Brawlhalla brings players together for matches and events.
+          <p><em>Image supplied by the site author from the official Brawlhalla website; this event photograph is not AI-generated.</em></p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="guide-page" id="when" aria-labelledby="when-title" hidden>
+      <p class="page-label">Pick a match</p>
+      <h2 id="when-title" tabindex="-1">When should you play?</h2>
+      <p class="intro">Whether you want a laid-back match for fun or a more competitive test of your skills, Brawlhalla has a way to play that fits the moment. Enjoy casual rounds at your own pace, or jump into ranked matches when you are ready to face a tougher challenge.</p>
+      <div class="content-grid">
+        <article class="note-card">
+          <h3>Play just for fun</h3>
+          <p>Casual matches are a relaxed way to hang out, try a new Legend, or enjoy a few rounds without worrying about your rank.</p>
+        </article>
+        <article class="note-card">
+          <h3>Bring on the competition</h3>
+          <ul>
+            <li>Try ranked when you want a serious challenge.</li>
+            <li>Practice a weapon or matchup between games.</li>
+            <li>Play with a team and work toward a shared win.</li>
+          </ul>
+        </article>
+      </div>
+      <figure>
+        <img class="when-image" src="https://tse1.mm.bing.net/th/id/OIP.ELuA9qPNowTiJyb-jRwyMAHaIj?r=0&amp;rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" width="474" height="547" alt="A Brawlhalla Legend in a dark hat checks the time on a wristwatch">
+        <figcaption>
+          Even a battle-hardened Legend has to keep an eye on the clock.
+          <p><em>Image supplied by the site author from Bing Images; this existing Brawlhalla character artwork is not AI-generated.</em></p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="guide-page" id="where" aria-labelledby="where-title" hidden>
+      <p class="page-label">Choose your arena</p>
+      <h2 id="where-title" tabindex="-1">Where do battles happen?</h2>
+      <p class="intro">The fight takes place on a stage made of platforms and open space. Learn how the layout affects movement: a narrow ledge, a high platform, or a long drop can change your next decision.</p>
+      <div class="content-grid">
+        <article class="note-card">
+          <h3>Modes for different groups</h3>
+          <ul>
+            <li>One-on-one matches focus on individual decisions.</li>
+            <li>Team battles reward coordination with a partner.</li>
+            <li>Free-for-all matches add more opponents and chaos.</li>
+          </ul>
+        </article>
+        <article class="note-card">
+          <h3>Read the stage</h3>
+          <p>Keep track of the edge, platforms, and your route back after a launch. Staying aware of the arena is just as important as watching your opponent.</p>
+        </article>
+      </div>
+      <figure>
+        <img class="what-image" src="https://tse3.mm.bing.net/th/id/OIP.XwQR5WIEZzJRiZSw3vEvSwHaDt?r=0&amp;rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" width="474" height="237" alt="Brawlhalla logo over a collage of colorful game arenas and stages">
+        <figcaption>
+          Brawlhalla's varied arenas give each match a different backdrop.
+          <p><em>Image supplied by the site author from Bing Images; this existing game artwork is not AI-generated.</em></p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="guide-page" id="how" aria-labelledby="how-title" hidden>
+      <p class="page-label">Learn the basics</p>
+      <h2 id="how-title" tabindex="-1">How do you play?</h2>
+      <p class="intro">Start with movement, attacks, and recovery. In a platform fighter, staying alive means managing the space around you as well as choosing when to strike.</p>
+      <div class="content-grid">
+        <article class="note-card">
+          <h3>Three things to practice</h3>
+          <ol>
+            <li>Move and jump to control your position.</li>
+            <li>Use light and heavy attacks with deliberate timing.</li>
+            <li>Save jumps or a dodge to recover toward the stage.</li>
+          </ol>
+        </article>
+        <article class="note-card">
+          <h3>Know your weapon</h3>
+          <p>Weapons have different attack ranges and rhythms. Learn a few reliable moves, watch for a weapon pickup, and avoid repeating the same predictable attack.</p>
+        </article>
+      </div>
+      <figure>
+        <img class="what-image" src="https://image.api.playstation.com/vulcan/ap/rnd/202312/1922/053c90de481a3dd120eb720c57f9391c37b8307079fb53d2.jpg" width="3840" height="2160" alt="Brawlhalla Legends wielding weapons while fighting in a colorful forest arena">
+        <figcaption>
+          Learn the weapons and movement by watching the Legends in action.
+          <p><em>Image supplied by the site author from PlayStation's image CDN; this existing game artwork is not AI-generated.</em></p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="guide-page" id="why" aria-labelledby="why-title" hidden>
+      <p class="page-label">More than a knockout</p>
+      <h2 id="why-title" tabindex="-1">Why play Brawlhalla?</h2>
+      <p class="intro">The fun comes from quick decisions: finding an opening, protecting your position, and adapting to what the other player does. Even a close loss can show you what to practice next.</p>
+      <div class="content-grid">
+        <article class="note-card">
+          <h3>Every round is different</h3>
+          <p>Weapon choices, spacing, movement, and opponent habits combine in new ways. The same attack will not solve every situation.</p>
+        </article>
+        <article class="note-card">
+          <h3>Improve one decision at a time</h3>
+          <p>Try a new weapon, practice recovering, or notice when you overcommit. Small adjustments can make the next match more rewarding.</p>
+        </article>
+      </div>
+      <figure>
+        <img class="why-image" src="https://cdn.myportfolio.com/3937c7b1-ca71-425d-aa90-632087610b89/562168d5-33bf-408b-91e1-eafbdaf4182c_rw_3840.jpg?h=7a6d06dfa9c985c842088c6094f22fee" width="3840" height="2560" alt="Spectators watch and cheer as players compete in a Brawlhalla esports event">
+        <figcaption>
+          The excitement of competition brings Brawlhalla players and fans together.
+          <p><em>Image supplied by the site author from a MyPortfolio-hosted image; this event photograph is not AI-generated.</em></p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="guide-page" id="ai-prompts" aria-labelledby="prompts-title" hidden>
+      <p class="page-label">Behind the illustrations</p>
+      <h2 id="prompts-title" tabindex="-1">AI Prompts</h2>
+      <p class="intro">AI helped draft the page text and the visual briefs for this project. The seven illustrations are original, hand-coded SVGs—not generated game screenshots—and the prompts describe the concepts used to make them.</p>
+      <div class="content-grid">
+        <article class="note-card">
+          <h3>Text prompt</h3>
+          <p>“Create a beginner-friendly guide to Brawlhalla explaining what the game is, who plays it, match modes, arenas, basic controls, and reasons to play. Keep the advice clear and welcoming.”</p>
+        </article>
+        <article class="note-card">
+          <h3>Visual direction</h3>
+          <p>“Create a coordinated set of original vector illustrations for a platform-fighting game guide. Use bold silhouettes, clean geometric shapes, midnight navy, cyan, and gold; avoid logos and recognizable copyrighted characters.”</p>
+        </article>
+      </div>
+      <figure>
+        <img src="images/prompts-process.svg" width="720" height="450" alt="A page of game-guide notes beside original fighter silhouettes and a weapon">
+        <figcaption>
+          AI-assisted concepts, translated into original SVG artwork.
+          <p><em>AI prompt used for this hand-coded SVG: Show a page of game-guide notes beside original generic fighter silhouettes and a simple fantasy weapon, using the same navy, cyan, and gold palette.</em></p>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <div class="divider" aria-hidden="true">✦ ✦ ✦</div>
+
+  <footer class="site-footer">
+    <p>Brawlhalla · A beginner's field guide to the game</p>
+    <nav class="validation-links" aria-label="Page validation">
+      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fjuhneelee-create.github.io%2Fitis3135%2Fhobby%2F">HTML validation</a>
+      <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjuhneelee-create.github.io%2Fitis3135%2Fhobby%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=1&amp;lang=en">CSS validation</a>
+      <a href="https://wave.webaim.org/report#/https://juhneelee-create.github.io/itis3135/hobby/">Accessibility check</a>
+    </nav>
+    <p>Page designed by <a href="../firmbrand.html">Chingtzu Lee Designs</a>.</p>
+  </footer>
+
+  <script>
+    (() => {
+      const pages = Array.from(document.querySelectorAll(".guide-page"));
+      const links = Array.from(document.querySelectorAll(".section-nav a"));
+
+      function showPage(hash, moveFocus) {
+        const pageId = hash.slice(1);
+        const selectedPage = pages.find((page) => page.id === pageId) || pages[0];
+
+        pages.forEach((page) => {
+          page.hidden = page !== selectedPage;
+        });
+
+        links.forEach((link) => {
+          if (link.hash === `#${selectedPage.id}`) {
+            link.setAttribute("aria-current", "page");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+
+        if (moveFocus) {
+          selectedPage.querySelector("h2").focus();
+        }
+      }
+
+      links.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          if (window.location.hash !== link.hash) {
+            window.history.pushState(null, "", link.hash);
+          }
+          showPage(link.hash, true);
+        });
+      });
+
+      window.addEventListener("popstate", () => {
+        showPage(window.location.hash.slice(1) ? window.location.hash : "#what", false);
+      });
+
+      showPage(window.location.hash.slice(1) ? window.location.hash : "#what", false);
+    })();
+  </script>
+</body>
+</html>

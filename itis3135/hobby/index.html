@@ -4,21 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A beginner-friendly field guide to Brawlhalla, its Legends, match modes, arenas, and basic play strategies.">
-  <title>Brawlhalla | A Player's Field Guide</title>
+  <title>Brawlhalla | What Is Brawlhalla?</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <style>
     :root {
       color-scheme: dark;
-      --ink: #f5f1e9;
-      --muted: #c5c2cd;
-      --paper: #102526;
-      --paper-deep: #193638;
-      --plum: #0a1c1d;
-      --teal: #55d6d2;
-      --coral: #ffb844;
-      --line: #365859;
-      --white: #193638;
-      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-family: "Trebuchet MS", Georgia, sans-serif;
       line-height: 1.65;
     }
 
@@ -29,25 +20,26 @@
     body {
       min-width: 19rem;
       min-height: 100vh;
-      margin: 0;
+      max-width: 100rem;
+      margin: 0 auto;
       background:
         radial-gradient(ellipse at 88% 8%, rgb(85 214 210 / 13%), transparent 24rem),
-        var(--paper);
-      color: var(--ink);
+        #102526;
+      color: #f5f1e9;
     }
 
     a {
-      color: var(--teal);
+      color: #55d6d2;
       text-decoration-thickness: 0.12em;
       text-underline-offset: 0.2em;
     }
 
     a:hover {
-      color: var(--coral);
+      color: #ffb844;
     }
 
     a:focus-visible {
-      outline: 3px solid var(--coral);
+      outline: 3px solid #ffb844;
       outline-offset: 4px;
       border-radius: 2px;
     }
@@ -56,26 +48,21 @@
       padding: clamp(1.5rem, 5vw, 3.75rem) max(1.25rem, calc((100% - 70rem) / 2));
       background: linear-gradient(125deg, #0a1c1d 15%, #174647 100%);
       color: #f5f1e9;
-      border-bottom: 0.45rem solid var(--coral);
+      border-bottom: 0.45rem solid #ffb844;
     }
 
     .eyebrow {
       margin: 0 0 0.4rem;
-      color: var(--coral);
+      color: #ffb844;
       font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
-    h1,
-    h2,
-    h3 {
-      font-family: "Trebuchet MS", Arial, sans-serif;
-      line-height: 1.15;
-    }
-
     h1 {
+      font-family: Georgia, "Trebuchet MS", serif;
+      line-height: 1.15;
       max-width: 16ch;
       margin: 0;
       font-size: clamp(2.5rem, 8vw, 5.25rem);
@@ -96,21 +83,25 @@
     }
 
     .section-nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem 0.75rem;
       margin: 0;
       padding: 0;
       list-style: none;
+      text-align: center;
+    }
+
+    .section-nav li {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0.275rem 0.375rem;
     }
 
     .section-nav a {
       display: inline-block;
       padding: 0.45rem 0.75rem;
-      border: 1px solid var(--line);
+      border: 1px solid #365859;
       border-radius: 0.5rem;
-      background: var(--white);
-      color: var(--ink);
+      background: #193638;
+      color: #f5f1e9;
       font-size: 0.94rem;
       font-weight: 700;
       text-decoration: none;
@@ -120,23 +111,23 @@
     .section-nav a:hover,
     .section-nav a[aria-current="page"] {
       transform: translateY(-1px);
-      border-color: var(--coral);
-      background: var(--coral);
+      border-color: #ffb844;
+      background: #ffb844;
       color: #102729;
     }
 
     main {
-      width: min(100% - 2.5rem, 70rem);
+      max-width: 70rem;
       min-height: 34rem;
       margin: 0 auto;
-      padding: 1.6rem 0 4.5rem;
+      padding: 1.6rem 1.25rem 4.5rem;
     }
 
     .guide-page {
       padding: clamp(1.25rem, 4vw, 3rem);
-      border: 1px solid var(--line);
+      border: 1px solid #365859;
       border-radius: 0.8rem;
-      background: rgb(28 54 58 / 92%);
+      background: rgba(28, 54, 58, 0.92);
       box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 22%);
       animation: arrive 220ms ease-out;
     }
@@ -158,7 +149,7 @@
 
     .page-label {
       margin: 0 0 0.35rem;
-      color: var(--coral);
+      color: #ffb844;
       font-size: 0.8rem;
       font-weight: 800;
       letter-spacing: 0.13em;
@@ -166,36 +157,38 @@
     }
 
     h2 {
+      font-family: Georgia, "Trebuchet MS", serif;
+      line-height: 1.15;
       margin: 0 0 1rem;
-      color: var(--coral);
+      color: #ffb844;
       font-size: clamp(2rem, 5vw, 3.1rem);
       letter-spacing: -0.025em;
     }
 
     h3 {
+      font-family: Georgia, "Trebuchet MS", serif;
+      line-height: 1.15;
       margin: 0 0 0.5rem;
-      color: var(--teal);
+      color: #55d6d2;
       font-size: 1.25rem;
     }
 
     .intro {
       max-width: 66ch;
-      color: var(--muted);
+      color: #c5c2cd;
       font-size: 1.12rem;
     }
 
-    .content-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-      margin: 1.7rem 0;
-    }
-
     .note-card {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 46%;
+      margin: 1.1rem 1%;
       padding: 1.1rem 1.2rem;
-      border-left: 0.25rem solid var(--coral);
+      border-left: 0.25rem solid #ffb844;
       border-radius: 0.25rem 0.5rem 0.5rem 0.25rem;
-      background: var(--paper);
+      background: #102526;
+      text-align: left;
     }
 
     .note-card p,
@@ -217,9 +210,9 @@
       max-width: 52rem;
       margin: 2rem 0 0;
       overflow: hidden;
-      border: 1px solid var(--line);
+      border: 1px solid #365859;
       border-radius: 1rem;
-      background: var(--paper-deep);
+      background: #193638;
     }
 
     figure img {
@@ -250,7 +243,7 @@
 
     figcaption {
       padding: 0.9rem 1.1rem 1rem;
-      color: var(--muted);
+      color: #c5c2cd;
       font-size: 0.94rem;
     }
 
@@ -260,33 +253,34 @@
 
     figcaption em {
       display: block;
-      color: var(--coral);
+      color: #ffb844;
       font-size: 0.88rem;
     }
 
     .divider {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
       max-width: 70rem;
       margin: 0 auto;
       padding: 0 1.25rem;
-      color: var(--teal);
+      color: #55d6d2;
       font-size: 1.2rem;
       letter-spacing: 0.3em;
+      text-align: center;
     }
 
     .divider::before,
     .divider::after {
+      display: inline-block;
       height: 1px;
-      flex: 1;
-      background: var(--line);
+      width: 30%;
+      margin: 0 0.8rem;
+      background: #365859;
       content: "";
+      vertical-align: middle;
     }
 
     .site-footer {
       padding: 2rem 1.25rem;
-      background: var(--plum);
+      background: #0a1c1d;
       color: #f5f1e9;
       text-align: center;
     }
@@ -296,18 +290,18 @@
     }
 
     .site-footer a {
-      color: var(--coral);
+      color: #ffb844;
     }
 
     .validation-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.6rem;
-      margin: 1rem 0;
+      margin: 0.7rem 0;
+      text-align: center;
     }
 
     .validation-links a {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0.3rem;
       padding: 0.4rem 0.7rem;
       border: 1px solid #45696b;
       border-radius: 0.4rem;
@@ -315,8 +309,8 @@
     }
 
     .validation-links a:hover {
-      background: var(--white);
-      color: var(--coral);
+      background: #193638;
+      color: #ffb844;
     }
 
     .skip-link {
@@ -327,8 +321,8 @@
       padding: 0.6rem 0.8rem;
       transform: translateY(-160%);
       border-radius: 0.3rem;
-      background: var(--white);
-      color: var(--ink);
+      background: #193638;
+      color: #f5f1e9;
     }
 
     .skip-link:focus {
@@ -336,13 +330,13 @@
     }
 
     @media (max-width: 42rem) {
-      .content-grid {
-        grid-template-columns: 1fr;
+      .note-card {
+        max-width: 96%;
+        margin: 1%;
       }
 
       main {
-        width: min(100% - 1.5rem, 70rem);
-        padding-top: 0.75rem;
+        padding: 0.75rem 0.75rem 4.5rem;
       }
 
       .section-nav {
@@ -351,23 +345,24 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+      .guide-page {
+        animation: none;
+      }
+
+      .section-nav a {
+        transition: none;
       }
     }
   </style>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Divs group decorative and grid content; classes apply reusable layout and theme styles, while IDs connect navigation, accessible labels, and page-title updates. -->
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <p class="eyebrow">A beginner's player guide</p>
     <h1>Brawlhalla</h1>
-    <p class="tagline">Pick a Legend, master a weapon, and battle your way back onto the stage in this fast-paced platform fighter.</p>
+    <p class="tagline"><em>Pick a Legend, master a weapon, and battle your way back onto the stage in this fast-paced platform fighter.</em></p>
   </header>
 
   <nav class="section-nav" aria-label="Brawlhalla guide pages">
@@ -387,15 +382,15 @@
   <main id="main-content">
     <section class="guide-page" id="what" aria-labelledby="what-title">
       <p class="page-label">Start here</p>
-      <h2 id="what-title" tabindex="-1">What is Brawlhalla?</h2>
+      <h2 id="what-title" tabindex="-1">What Is Brawlhalla?</h2>
       <p class="intro">Brawlhalla is a free-to-play platform fighting game from Blue Mammoth Games. Players choose a Legend, fight on floating stages, and try to knock opponents off the arena. As damage builds, a fighter becomes easier to launch away.</p>
       <div class="content-grid">
         <article class="note-card">
-          <h3>Fight for the stage</h3>
+          <h3>Fight for the Stage</h3>
           <p>Move, jump, dodge, and attack while watching your position. A well-timed hit can send an opponent flying past the edge.</p>
         </article>
         <article class="note-card">
-          <h3>Choose your style</h3>
+          <h3>Choose Your Style</h3>
           <p>Each Legend has a distinct look and a set of two weapon types. Pick up weapons during a match and adapt your attacks to the situation.</p>
         </article>
       </div>
@@ -410,15 +405,15 @@
 
     <section class="guide-page" id="who" aria-labelledby="who-title" hidden>
       <p class="page-label">Legends and players</p>
-      <h2 id="who-title" tabindex="-1">Who can play?</h2>
+      <h2 id="who-title" tabindex="-1">Who Can Play?</h2>
       <p class="intro">Anyone can jump into Brawlhalla. The roster of playable fighters is called the Legends; each one brings a different visual identity and combination of weapon types to the fight.</p>
       <div class="content-grid">
         <article class="note-card">
-          <h3>Find a Legend you enjoy</h3>
+          <h3>Find a Legend You Enjoy</h3>
           <p>Try different Legends in training and pay attention to their weapons, movement, and feel. Comfort and curiosity matter more than picking a so-called perfect main.</p>
         </article>
         <article class="note-card">
-          <h3>Play together</h3>
+          <h3>Play Together</h3>
           <p>Practice with friends, team up, or face other players. Matches are a chance to learn from different play styles, not only to chase a win.</p>
         </article>
       </div>
@@ -433,15 +428,15 @@
 
     <section class="guide-page" id="when" aria-labelledby="when-title" hidden>
       <p class="page-label">Pick a match</p>
-      <h2 id="when-title" tabindex="-1">When should you play?</h2>
+      <h2 id="when-title" tabindex="-1">When Should You Play?</h2>
       <p class="intro">Whether you want a laid-back match for fun or a more competitive test of your skills, Brawlhalla has a way to play that fits the moment. Enjoy casual rounds at your own pace, or jump into ranked matches when you are ready to face a tougher challenge.</p>
       <div class="content-grid">
         <article class="note-card">
-          <h3>Play just for fun</h3>
+          <h3>Play Just for Fun</h3>
           <p>Casual matches are a relaxed way to hang out, try a new Legend, or enjoy a few rounds without worrying about your rank.</p>
         </article>
         <article class="note-card">
-          <h3>Bring on the competition</h3>
+          <h3>Bring on the Competition</h3>
           <ul>
             <li>Try ranked when you want a serious challenge.</li>
             <li>Practice a weapon or matchup between games.</li>
@@ -460,11 +455,11 @@
 
     <section class="guide-page" id="where" aria-labelledby="where-title" hidden>
       <p class="page-label">Choose your arena</p>
-      <h2 id="where-title" tabindex="-1">Where do battles happen?</h2>
+      <h2 id="where-title" tabindex="-1">Where Do Battles Happen?</h2>
       <p class="intro">The fight takes place on a stage made of platforms and open space. Learn how the layout affects movement: a narrow ledge, a high platform, or a long drop can change your next decision.</p>
       <div class="content-grid">
         <article class="note-card">
-          <h3>Modes for different groups</h3>
+          <h3>Modes for Different Groups</h3>
           <ul>
             <li>One-on-one matches focus on individual decisions.</li>
             <li>Team battles reward coordination with a partner.</li>
@@ -472,7 +467,7 @@
           </ul>
         </article>
         <article class="note-card">
-          <h3>Read the stage</h3>
+          <h3>Read the Stage</h3>
           <p>Keep track of the edge, platforms, and your route back after a launch. Staying aware of the arena is just as important as watching your opponent.</p>
         </article>
       </div>
@@ -487,11 +482,11 @@
 
     <section class="guide-page" id="how" aria-labelledby="how-title" hidden>
       <p class="page-label">Learn the basics</p>
-      <h2 id="how-title" tabindex="-1">How do you play?</h2>
+      <h2 id="how-title" tabindex="-1">How Do You Play?</h2>
       <p class="intro">Start with movement, attacks, and recovery. In a platform fighter, staying alive means managing the space around you as well as choosing when to strike.</p>
       <div class="content-grid">
         <article class="note-card">
-          <h3>Three things to practice</h3>
+          <h3>Three Things to Practice</h3>
           <ol>
             <li>Move and jump to control your position.</li>
             <li>Use light and heavy attacks with deliberate timing.</li>
@@ -499,7 +494,7 @@
           </ol>
         </article>
         <article class="note-card">
-          <h3>Know your weapon</h3>
+          <h3>Know Your Weapon</h3>
           <p>Weapons have different attack ranges and rhythms. Learn a few reliable moves, watch for a weapon pickup, and avoid repeating the same predictable attack.</p>
         </article>
       </div>
@@ -514,20 +509,20 @@
 
     <section class="guide-page" id="why" aria-labelledby="why-title" hidden>
       <p class="page-label">More than a knockout</p>
-      <h2 id="why-title" tabindex="-1">Why play Brawlhalla?</h2>
+      <h2 id="why-title" tabindex="-1">Why Play Brawlhalla?</h2>
       <p class="intro">The fun comes from quick decisions: finding an opening, protecting your position, and adapting to what the other player does. Even a close loss can show you what to practice next.</p>
       <div class="content-grid">
         <article class="note-card">
-          <h3>Every round is different</h3>
+          <h3>Every Round Is Different</h3>
           <p>Weapon choices, spacing, movement, and opponent habits combine in new ways. The same attack will not solve every situation.</p>
         </article>
         <article class="note-card">
-          <h3>Improve one decision at a time</h3>
+          <h3>Improve One Decision at a Time</h3>
           <p>Try a new weapon, practice recovering, or notice when you overcommit. Small adjustments can make the next match more rewarding.</p>
         </article>
       </div>
       <figure>
-        <img class="why-image" src="https://cdn.myportfolio.com/3937c7b1-ca71-425d-aa90-632087610b89/562168d5-33bf-408b-91e1-eafbdaf4182c_rw_3840.jpg?h=7a6d06dfa9c985c842088c6094f22fee" width="3840" height="2560" alt="Spectators watch and cheer as players compete in a Brawlhalla esports event">
+        <img class="why-image" src="images/why-esports.jpg" width="1920" height="1280" alt="Spectators watch and cheer as players compete in a Brawlhalla esports event">
         <figcaption>
           The excitement of competition brings Brawlhalla players and fans together.
           <p><em>Image supplied by the site author from a MyPortfolio-hosted image; this event photograph is not AI-generated.</em></p>
@@ -541,11 +536,11 @@
       <p class="intro">AI helped draft the page text and the visual briefs for this project. The seven illustrations are original, hand-coded SVGs—not generated game screenshots—and the prompts describe the concepts used to make them.</p>
       <div class="content-grid">
         <article class="note-card">
-          <h3>Text prompt</h3>
+          <h3>Text Prompt</h3>
           <p>“Create a beginner-friendly guide to Brawlhalla explaining what the game is, who plays it, match modes, arenas, basic controls, and reasons to play. Keep the advice clear and welcoming.”</p>
         </article>
         <article class="note-card">
-          <h3>Visual direction</h3>
+          <h3>Visual Direction</h3>
           <p>“Create a coordinated set of original vector illustrations for a platform-fighting game guide. Use bold silhouettes, clean geometric shapes, midnight navy, cyan, and gold; avoid logos and recognizable copyrighted characters.”</p>
         </article>
       </div>
@@ -579,6 +574,9 @@
       function showPage(hash, moveFocus) {
         const pageId = hash.slice(1);
         const selectedPage = pages.find((page) => page.id === pageId) || pages[0];
+        const pageTitle = selectedPage.querySelector("h2").textContent;
+
+        document.title = `Brawlhalla | ${pageTitle}`;
 
         pages.forEach((page) => {
           page.hidden = page !== selectedPage;
@@ -614,5 +612,6 @@
       showPage(window.location.hash.slice(1) ? window.location.hash : "#what", false);
     })();
   </script>
+  <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>

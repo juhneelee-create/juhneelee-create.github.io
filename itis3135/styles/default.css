@@ -118,6 +118,46 @@ main a:visited {
   border: 1px solid var(--line);
 }
 
+.website-evaluation {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--copper);
+  /* White separates evaluation cards from the page background for readability. */
+  background: #fff;
+}
+
+.website-evaluation h3 {
+  margin-top: 0;
+  color: var(--forest);
+}
+
+.evaluation-figure {
+  width: min(100%, 30rem);
+  margin: 1rem 0;
+}
+
+.evaluation-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.evaluation-figure figcaption {
+  color: var(--muted-ink);
+  font-size: 0.9rem;
+}
+
+.website-evaluation li + li {
+  margin-top: 0.5rem;
+}
+
+.research-sources {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
 footer {
   padding: 1rem 1.25rem;
   background: #e4ebe5;

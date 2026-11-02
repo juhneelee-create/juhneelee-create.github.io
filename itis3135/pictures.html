@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A course page exploring image formats, scaling, and proportions using a travel photo and a personal geometric composition.">
+  <title>Chingtzu Lee's Courageous Leopards | ITIS3135 | Everything Pictures</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="styles/default.css">
+  <!-- This page uses class selectors and id selectors to organize the image sections, article cards, and comparison layouts. -->
+  <style>
+    /* This stylesheet uses class selectors and id selectors to organize the article cards, sections, and comparison layouts on this page. */
+    .pictures-page {
+      max-width: 72rem;
+    }
+
+    .image-section {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #cbd5cd;
+    }
+
+    .image-section-title {
+      margin-bottom: 0.75rem;
+      color: #174a3a;
+    }
+
+    .image-summary {
+      margin-bottom: 1.5rem;
+      font-size: 1.03rem;
+    }
+
+    .link-row a,
+    .image-figure img,
+    .comparison-row img,
+    .inline-demo,
+    .same-size img {
+      box-sizing: border-box;
+    }
+
+    .photo-article {
+      margin: 1.5rem 0;
+      padding: 1.25rem 1.25rem 1rem;
+      /* White background is used to keep the article blocks clearly separated from the page background. */
+      background: #fff;
+      border: 1px solid #d9e1da;
+      border-left: 5px solid #b75b36;
+    }
+
+    .photo-article-title {
+      margin-top: 0;
+      color: #174a3a;
+    }
+
+    .photo-article p {
+      margin: 0.5rem 0;
+    }
+
+    .link-row,
+    .figure-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.9rem;
+    }
+
+    .link-row a {
+      display: inline-block;
+      flex: 1 1 12rem;
+      padding: 0.6rem 0.9rem;
+      background: #edf5ef;
+      border: 1px solid #cbd5cd;
+      border-radius: 0.35rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .image-figure {
+      flex: 1 1 15rem;
+      max-width: 35rem;
+      margin: 0;
+    }
+
+    .reduced-demo {
+      width: 30%;
+      max-width: 30rem;
+    }
+
+    .image-figure img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #cbd5cd;
+      background: #f4f6f1;
+    }
+
+    .image-figure figcaption {
+      margin-top: 0.5rem;
+      color: #52615c;
+      font-size: 0.9rem;
+    }
+
+    .small-demo {
+      max-width: 12rem;
+    }
+
+    .distorted-demo img {
+      border: 1px solid #b75b36;
+    }
+
+    .same-size img {
+      width: auto;
+      max-width: 18rem;
+    }
+
+    .comparison-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+
+    .comparison-row figure {
+      margin: 0;
+      flex: 1 1 13rem;
+    }
+
+    .comparison-row img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #cbd5cd;
+    }
+
+    .inline-demo {
+      width: auto;
+      max-width: 30rem;
+      height: auto;
+      border: 1px solid #cbd5cd;
+      display: block;
+      margin-top: 0.75rem;
+    }
+
+    .profile-note {
+      font-style: italic;
+      color: #52615c;
+    }
+
+    hr {
+      margin: 2rem 0 0.75rem;
+      border: 0;
+      border-top: 2px solid #b75b36;
+    }
+
+    @media (max-width: 38rem) {
+      .link-row a,
+      .image-figure,
+      .comparison-row figure {
+        flex-basis: 100%;
+      }
+    }
+  </style>
+  <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- This div includes the shared course header so all pages retain one consistent navigation bar and site identity. -->
+  <div data-include="components/header.html"></div>
+
+  <main class="pictures-page">
+    <h2 class="page-heading">Everything Pictures</h2>
+    <p>This page explores how images behave in the web environment: how format affects file size, how resizing changes visual quality, and how proportion matters when an image is edited or displayed. The goal is to understand why a large original photo can look crisp in one context and distorted or blurry in another.</p>
+
+    <section class="image-section" aria-labelledby="pexels-photo-heading">
+      <h3 class="image-section-title" id="pexels-photo-heading">Demonstrating Image Formats and Compression with a Ferry Crossing Photo from Pexels</h3>
+      <p class="image-summary">I chose this big landscape image because it has lots of color, fine detail, and a strong sense of depth, which makes it useful for comparing file formats and resizing changes. The photo was taken by Henrique Baldy and is a royalty-free Pexels image, so I saved it with a filename that preserves the original name, source, and photographer credit.</p>
+
+      <article class="photo-article">
+        <h4 class="photo-article-title">Original Image</h4>
+        <p>Click to open the image in its original JPG format: <a href="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels.jpg">Original JPG</a></p>
+        <div class="link-row">
+          <a href="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels.jpg">Original Image</a>
+          <a href="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels.gif">Original Image as a GIF</a>
+          <a href="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-grayscale.jpg">Grayscale Version</a>
+          <a href="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-black-and-white.jpg">Black and White Version</a>
+        </div>
+      </article>
+
+      <article class="photo-article">
+        <h4 class="photo-article-title">Downsizing Images with CSS</h4>
+        <p>The original file is 3000 by 2000 pixels and is roughly 1.8 MB. I used CSS to shrink the same image while keeping its original proportions, which is a good example of how the browser can display a smaller version without permanently changing the source file.</p>
+        <!-- These two inline width and height values intentionally demonstrate CSS resizing without changing the original image files. -->
+        <figure class="image-figure reduced-demo">
+          <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels.jpg" alt="Original ferry landscape pictured at a reduced CSS width" style="width: 30%; height: auto;">
+          <figcaption>Original photo displayed at about 30% width through CSS only, preserving the original aspect ratio.</figcaption>
+        </figure>
+      </article>
+
+      <article class="photo-article">
+        <h4 class="photo-article-title">Proper Reduction of Image with Editor</h4>
+        <p>By resizing the image in an editor to 600 pixels wide, the web browser receives a version that is optimized for display and keeps a balanced, natural appearance. The file is much smaller while still retaining the overall detail.</p>
+        <figure class="image-figure">
+          <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-600x400.jpg" alt="Properly reduced ferry photo sized to 600 by 400 pixels">
+          <figcaption>Properly reduced editor-sized version: 600 x 400 pixels, which matches the browser's layout needs without distortion.</figcaption>
+        </figure>
+      </article>
+
+      <article class="photo-article">
+        <h4 class="photo-article-title">Improper Image Proportions with CSS</h4>
+        <p>When one dimension is changed without keeping the correct ratio, the image looks stretched. This demonstrates why matching the aspect ratio matters so much when preparing photos for the web.</p>
+        <div class="figure-row">
+          <figure class="image-figure distorted-demo">
+            <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-800x400.jpg" alt="Ferry photo stretched wider than the original ratio">
+            <figcaption>Stretched wider: 800 x 400 pixels, with the horizontal dimension increased and the height left unchanged.</figcaption>
+          </figure>
+          <figure class="image-figure distorted-demo">
+            <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-600x533.jpg" alt="Ferry photo stretched taller than the original ratio">
+            <figcaption>Stretched taller: 600 x 533 pixels, with the height increased relative to the original reduced image.</figcaption>
+          </figure>
+          <figure class="image-figure distorted-demo">
+            <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-800x533.jpg" alt="Ferry photo stretched in both directions">
+            <figcaption>Stretched in both directions: 800 x 533 pixels, which overcorrects the original geometry.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="photo-article">
+        <h4 class="photo-article-title">Improper Enlarging with CSS</h4>
+        <p>When a smaller image is displayed at a much larger size, it loses detail and appears blurry. The second image here is a reduced version intended for a more compact layout; when both are displayed at the same CSS size, the lower-quality version stands out.</p>
+        <div class="comparison-row">
+          <figure>
+            <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-300x200.jpg" alt="Smaller reduced ferry image displayed at a larger scale">
+            <figcaption>1500% enlarged from a 300 x 200 version of the photo; lower resolution is easier to see.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/crossing-tagus-river-lisbon-27926305@henrique-baldy_pexels-600x400.jpg" alt="Original reduced ferry image displayed at the same size as the smaller variation">
+            <figcaption>Proper 600 x 400 version displayed at the same size for a direct visual comparison.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <hr>
+
+    <section class="image-section" aria-labelledby="geometry-photo-heading">
+      <h3 class="image-section-title" id="geometry-photo-heading">Demonstrating Proportion with a Personal Geometry Image</h3>
+      <p class="image-summary">This personal composition uses a perfectly round frisbee beside a more organic face shape to show how proportion and perspective affect visual balance. The circular object is kept round, while the face remains more subjective and rounded in a different way, which makes the comparison easier to study.</p>
+
+      <article class="photo-article">
+        <h4 class="photo-article-title">Original Geometry Image</h4>
+        <p>This image is intentionally built around a circular, highly proportioned object next to a stylized face. It was created and saved with a descriptive file name that identifies the source, object, and creator.</p>
+        <div class="link-row">
+          <a href="images/frisbee-next-to-head@divonbriesen.jpg">Original JPG</a>
+          <a href="images/frisbee-next-to-head@divonbriesen-grayscale.jpg">Grayscale Version</a>
+          <a href="images/frisbee-next-to-head@divonbriesen-black-and-white.jpg">Black and White Version</a>
+          <a href="images/frisbee-next-to-head@divonbriesen-600x600.jpg">Reduced Editor Version</a>
+        </div>
+        <figure class="image-figure">
+          <img src="images/frisbee-next-to-head@divonbriesen.jpg" alt="A round frisbee beside a stylized face" style="width: 35%; height: auto;">
+          <figcaption>Original personal geometry photo with a round frisbee and a face-like form to demonstrate proportion and object shape.</figcaption>
+        </figure>
+      </article>
+
+      <article class="photo-article">
+        <h4 class="photo-article-title">Downsizing Images with CSS</h4>
+        <p>The original personal image is 2000 by 2000 pixels and is about 0.19 MB. Here the same image is reduced with CSS to make a smaller, balanced display while keeping the square format and the shapes clear.</p>
+        <figure class="image-figure reduced-demo">
+          <img src="images/frisbee-next-to-head@divonbriesen.jpg" alt="Reduced personal geometry image using CSS">
+          <figcaption>CSS-only reduction preserves the full original proportions, but scales the image to a much smaller browser size.</figcaption>
+        </figure>
+      </article>
+
+      <article class="photo-article">
+        <h4 class="photo-article-title">Proper Reduction of Image with Editor</h4>
+        <p>A careful editor resize to 600 pixels wide keeps the object proportions correct and makes the subject easier to read without obvious stretching or blur. This is the version I would use for a course page or gallery card.</p>
+        <figure class="image-figure">
+          <img src="images/frisbee-next-to-head@divonbriesen-600x600.jpg" alt="Properly reduced frisbee next to head image in a 600 by 600 square">
+          <figcaption>Proper editor reduction at 600 x 600 pixels keeps the square subject suitable for a balanced web display.</figcaption>
+        </figure>
+      </article>
+
+      <article class="photo-article">
+        <h4 class="photo-article-title">Improper Image Proportions with CSS</h4>
+        <p>When the same reduced image is stretched by changing just one side, it becomes visually wrong despite still being a valid image file. The differences are easy to see when the subject is a circle or a nearly square object.</p>
+        <div class="figure-row">
+          <figure class="image-figure distorted-demo">
+            <img src="images/frisbee-next-to-head@divonbriesen-800x600.jpg" alt="Frisbee and face image stretched wider">
+            <figcaption>Wider than the natural format: 800 x 600 pixels, showing a stretched composition.</figcaption>
+          </figure>
+          <figure class="image-figure distorted-demo">
+            <img src="images/frisbee-next-to-head@divonbriesen-600x533.jpg" alt="Frisbee and face image stretched taller">
+            <figcaption>Taller than the natural format: 600 x 533 pixels, showing a tall, distorted result.</figcaption>
+          </figure>
+          <figure class="image-figure distorted-demo">
+            <img src="images/frisbee-next-to-head@divonbriesen-800x533.jpg" alt="Frisbee and face image stretched in both directions">
+            <figcaption>Stretched in both directions, which compounds the proportion problem.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="photo-article">
+        <h4 class="photo-article-title">Improper Enlarging with CSS</h4>
+        <p>By displaying a smaller image at the same size as a higher-quality version, the lower-resolution file becomes noticeably softer. This shows how file size and display size work together in real websites.</p>
+        <div class="comparison-row">
+          <figure>
+            <img src="images/frisbee-next-to-head@divonbriesen-150x150.jpg" alt="Small low-quality personal geometry image displayed enlarged">
+            <figcaption>Smaller 150 x 150 version displayed at a larger size, which reveals visible softness and reduced detail.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/frisbee-next-to-head@divonbriesen-600x600.jpg" alt="Larger higher-quality personal geometry image displayed at the same CSS size">
+            <figcaption>Proper 600 x 600 version shown at the same scale for a cleaner comparison.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- This div includes the shared course footer so each page carries the same branding and credit at the bottom. -->
+  <div data-include="components/footer.html"></div>
+
+  <script src="scripts/include.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chingtzu Lee's Courageous Leopards | ITIS3135 | Introduction Form</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <h2>Introduction Form</h2>
+    <h3>Please Submit The Form Below.</h3>
+
+    <!-- Div and span elements/classes/IDs group fields for responsive layout and connect labels, styles, and JavaScript controls. -->
+    <form id="form" novalidate>
+      <figure class="form-image">
+        <img id="image-preview" src="images/frisbee-next-to-head@divonbriesen-300x300.jpg" alt="Photo of Chingtzu Lee">
+        <figcaption>Default profile picture. Upload a picture or enter another image URL to replace it.</figcaption>
+      </figure>
+
+      <fieldset>
+        <legend>About You</legend>
+        <div class="form-grid">
+          <div class="field-wrap">
+            <label for="firstName">First Name</label>
+            <input id="firstName" name="firstName" type="text" value="Chingtzu" required>
+          </div>
+          <div class="field-wrap">
+            <label for="middleName">Middle Name or Initial (optional)</label>
+            <input id="middleName" name="middleName" type="text" value="M." placeholder="M.">
+          </div>
+          <div class="field-wrap">
+            <label for="nickname">Nickname / Preferred Name (optional)</label>
+            <input id="nickname" name="nickname" type="text" value="Chi" placeholder="Preferred name">
+          </div>
+          <div class="field-wrap">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="lastName" type="text" value="Lee" required>
+          </div>
+          <div class="field-wrap field-span-full">
+            <label for="acknowledgment">Acknowledgment Statement</label>
+            <textarea id="acknowledgment" name="acknowledgment" rows="3" required>I understand that this is a public document, and I won't put anything here I wouldn't want anyone to see.</textarea>
+          </div>
+          <div class="field-wrap">
+            <label for="acknowledgmentDate">Acknowledgment Date</label>
+            <input id="acknowledgmentDate" name="acknowledgmentDate" type="text" value="8/20/26" required>
+          </div>
+          <div class="field-wrap">
+            <label for="adjectives">Mascot Adjective</label>
+            <input id="adjectives" name="adjectives" type="text" value="Courageous" required>
+          </div>
+          <div class="field-wrap">
+            <label for="animal">Mascot Animal</label>
+            <input id="animal" name="animal" type="text" value="Leopard" required>
+          </div>
+          <div class="field-wrap">
+            <label for="prettyNameDivider">Divider</label>
+            <input id="prettyNameDivider" name="prettyNameDivider" type="text" value="~" placeholder="~">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Picture and Biography</legend>
+        <div class="form-grid">
+          <div class="field-wrap">
+            <label for="pictureUpload">Picture Upload</label>
+            <input id="pictureUpload" name="pictureUpload" type="file" accept="image/*">
+          </div>
+          <div class="field-wrap">
+            <label for="img">Picture URL</label>
+            <input id="img" name="img" type="text" value="images/frisbee-next-to-head@divonbriesen-300x300.jpg" placeholder="https://example.com/image.jpg">
+          </div>
+          <div class="field-wrap">
+            <label for="pictureAlt">Picture Alt Text</label>
+            <input id="pictureAlt" name="pictureAlt" type="text" value="Photo of Chingtzu Lee" placeholder="Describe the photo">
+          </div>
+          <div class="field-wrap">
+            <label for="caption">Picture Caption</label>
+            <input id="caption" name="caption" type="text" value="A cheerful portrait of Chi." placeholder="Caption for the image">
+          </div>
+          <div class="field-wrap field-span-full">
+            <label for="statement">Personal Statement</label>
+            <textarea id="statement" name="statement" rows="4" required>Hey, I'm Chingtzu Lee, a UNC Charlotte student studying ITIS 3135. I enjoy building clean, functional websites and learning how to make them look good while staying accessible and easy to navigate. Outside of class, I'm into coding, design, and exploring new tech tools that make life easier.</textarea>
+          </div>
+          <div class="field-wrap field-span-full">
+            <label for="personalBackground">Personal Background</label>
+            <textarea id="personalBackground" name="personalBackground" rows="3" required>I grew up in Charlotte and have spent most of my life building curiosity around technology, design, and creative problem solving.</textarea>
+          </div>
+          <div class="field-wrap field-span-full">
+            <label for="professionalBackground">Professional Background</label>
+            <textarea id="professionalBackground" name="professionalBackground" rows="3" required>I enjoy hands-on experiences that blend technology and communication, and I am always looking for ways to improve how people interact with digital tools.</textarea>
+          </div>
+          <div class="field-wrap field-span-full">
+            <label for="academicBackground">Academic Background</label>
+            <textarea id="academicBackground" name="academicBackground" rows="3" required>I am currently pursuing a degree in Information Technology with a focus on web development and creating user-centered digital experiences.</textarea>
+          </div>
+          <div class="field-wrap field-span-full">
+            <label for="primaryWorkComputer">Primary Work Computer</label>
+            <textarea id="primaryWorkComputer" name="primaryWorkComputer" rows="3" required>A modern laptop running a current operating system and a browser-based toolchain for HTML, CSS, and JavaScript projects.</textarea>
+          </div>
+          <div class="field-wrap field-span-full">
+            <label for="primaryWorkLocation">Primary Work Location</label>
+            <textarea id="primaryWorkLocation" name="primaryWorkLocation" rows="3" required>UNC Charlotte campus and collaborative study spaces where I can focus and create.</textarea>
+          </div>
+          <div class="field-wrap field-span-full">
+            <label for="alternateComputerLocation">Alternate Computer Location</label>
+            <textarea id="alternateComputerLocation" name="alternateComputerLocation" rows="3" required>When I am away from campus, I work from home or coworking spaces with the same development workflow and project notes.</textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Courses</legend>
+        <div id="course-list" class="course-list">
+          <div class="course-row">
+            <div class="course-field">
+              <label>Department</label>
+              <input type="text" data-course-field="department" value="ITIS" placeholder="ITIS">
+            </div>
+            <div class="course-field">
+              <label>Number</label>
+              <input type="text" data-course-field="number" value="3135" placeholder="3135">
+            </div>
+            <div class="course-field course-title-field">
+              <label>Course Title</label>
+              <input type="text" data-course-field="title" value="Front-End Web Development" placeholder="Course title">
+            </div>
+            <div class="course-field course-reason-field">
+              <label>Reason</label>
+              <input type="text" data-course-field="reason" value="This class helps me turn design ideas into polished, usable websites." placeholder="Why are you taking this course?">
+            </div>
+            <button type="button" class="remove-course">Remove</button>
+          </div>
+          <div class="course-row">
+            <div class="course-field">
+              <label>Department</label>
+              <input type="text" data-course-field="department" value="ITIS" placeholder="ITIS">
+            </div>
+            <div class="course-field">
+              <label>Number</label>
+              <input type="text" data-course-field="number" value="2110" placeholder="2110">
+            </div>
+            <div class="course-field course-title-field">
+              <label>Course Title</label>
+              <input type="text" data-course-field="title" value="Introduction to Information Systems" placeholder="Course title">
+            </div>
+            <div class="course-field course-reason-field">
+              <label>Reason</label>
+              <input type="text" data-course-field="reason" value="It gives me a stronger foundation in digital systems and how people use them." placeholder="Why are you taking this course?">
+            </div>
+            <button type="button" class="remove-course">Remove</button>
+          </div>
+        </div>
+        <button id="add-course" type="button" class="secondary-button">Add Course</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Favorite Quote and Details</legend>
+        <div class="form-grid">
+          <div class="field-wrap field-span-full">
+            <label for="quote">Quote</label>
+            <textarea id="quote" name="quote" rows="3" required>The best way to learn is to build, test, iterate, and make the details better each time.</textarea>
+          </div>
+          <div class="field-wrap">
+            <label for="quoteAuthor">Quote Author</label>
+            <input id="quoteAuthor" name="quoteAuthor" type="text" value="Chingtzu Lee" required>
+          </div>
+          <div class="field-wrap field-span-full">
+            <label for="funnyThing">Funny Thing (optional)</label>
+            <textarea id="funnyThing" name="funnyThing" rows="2">I once tried to debug a small layout issue for so long that I started calling it a personal side quest.</textarea>
+          </div>
+          <div class="field-wrap field-span-full">
+            <label for="somethingToShare">Something I Would Like to Share (optional)</label>
+            <textarea id="somethingToShare" name="somethingToShare" rows="3">I like combining technical problem solving with creativity, which is why I enjoy designing webpages that feel both useful and welcoming.</textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Links</legend>
+        <div class="form-grid">
+          <div class="field-wrap">
+            <label for="linkedinUrl">LinkedIn</label>
+            <input id="linkedinUrl" name="linkedinUrl" type="url" value="https://www.linkedin.com" placeholder="https://www.linkedin.com">
+          </div>
+          <div class="field-wrap">
+            <label for="githubUrl">GitHub</label>
+            <input id="githubUrl" name="githubUrl" type="url" value="https://github.com" placeholder="https://github.com">
+          </div>
+          <div class="field-wrap">
+            <label for="portfolioUrl">Portfolio</label>
+            <input id="portfolioUrl" name="portfolioUrl" type="url" value="https://divonbriesen.github.io/teaching/itis3135/" placeholder="https://example.com/portfolio">
+          </div>
+          <div class="field-wrap">
+            <label for="courseResourceUrl">Course Resources</label>
+            <input id="courseResourceUrl" name="courseResourceUrl" type="url" value="https://divonbriesen.github.io/teaching/itis3135/" placeholder="https://example.com/course-resources">
+          </div>
+          <div class="field-wrap">
+            <label for="freeCodeCampUrl">freeCodeCamp</label>
+            <input id="freeCodeCampUrl" name="freeCodeCampUrl" type="url" value="https://www.freecodecamp.org" placeholder="https://www.freecodecamp.org">
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button" id="clear-form">Clear</button>
+        <button type="button" data-output-format="html">Generate HTML</button>
+        <button type="button" data-output-format="json">Generate JSON</button>
+        <button type="button" data-output-format="xml">Generate XML</button>
+      </div>
+    </form>
+
+    <section id="generated-section" class="generated-section" hidden aria-live="polite">
+      <h3>Generated Output</h3>
+      <pre id="generated-output"></pre>
+    </section>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="scripts/include.min.js"></script>
+  <script src="scripts/introduction.js"></script>
+</body>
+</html>

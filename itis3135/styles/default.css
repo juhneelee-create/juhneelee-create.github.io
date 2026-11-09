@@ -7,6 +7,11 @@
   --leaf: #d8e9dd;
   --copper: #b75b36;
   --line: #cbd5cd;
+  --space-xs: 0.4rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-nav-row: 0.45rem;
+  --space-nav-column: 1.25rem;
 }
 
 * {
@@ -42,7 +47,7 @@ header {
 nav ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem 1.25rem;
+  gap: var(--space-nav-row) var(--space-nav-column);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -171,7 +176,198 @@ footer p {
   margin: 0.25rem 0;
 }
 
+form {
+  display: block;
+}
+
+fieldset {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  /* White keeps the editable form sections distinct from the soft page background. */
+  background: #fff;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: var(--forest);
+  font-weight: 700;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.field-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.field-span-full {
+  grid-column: 1 / -1;
+}
+
+label {
+  color: var(--forest);
+  font-weight: 700;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: #f9fbfa;
+  color: var(--ink);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid var(--forest);
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.1rem;
+  background: var(--forest);
+  /* White text maintains contrast against the forest-green button background. */
+  color: #fff;
+}
+
+button:hover,
+button:focus-visible {
+  filter: brightness(1.06);
+}
+
+.secondary-button {
+  margin-top: 0.75rem;
+  /* White distinguishes the secondary action from the primary green buttons. */
+  background: #fff;
+  color: var(--forest);
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: 1rem;
+}
+
+.course-list {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.form-image {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin: 1rem 0 1.5rem;
+}
+
+.form-image img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+.form-image figcaption {
+  color: var(--muted-ink);
+}
+
+.course-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  gap: var(--space-sm);
+  align-items: end;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: #f7faf8;
+}
+
+.course-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.course-title-field {
+  grid-column: span 1;
+}
+
+.course-reason-field {
+  grid-column: span 1;
+}
+
+.remove-course {
+  align-self: end;
+  width: auto;
+  background: #8b2e2e;
+  border-color: #8b2e2e;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--copper);
+  background: #f5f7f3;
+  color: var(--forest);
+  font-style: italic;
+}
+
+cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  color: var(--muted-ink);
+}
+
+.generated-section {
+  margin-top: 2rem;
+}
+
+.generated-section pre {
+  overflow: auto;
+  max-height: 32rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: #e4ebe5;
+  color: var(--ink);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 38rem) {
+  .form-grid,
+  .course-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-image {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .remove-course {
+    width: 100%;
+  }
   header {
     padding: 1.25rem;
   }

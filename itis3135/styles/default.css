@@ -103,6 +103,93 @@ main {
   line-height: 1.2;
 }
 
+h6 {
+  font-size: clamp(0.8rem, 3vw, 2rem);
+  white-space: nowrap;
+}
+
+.introduction-photo {
+  width: min(100%, 12.5rem);
+  margin: 1rem 0;
+}
+
+.introduction-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.625rem;
+}
+
+.introduction-photo figcaption {
+  color: var(--muted-ink);
+  font-size: 0.9rem;
+}
+
+.classmate-intro {
+  margin-bottom: 1.5rem;
+}
+
+.classmate-illustration {
+  float: right;
+  width: min(100%, 8rem);
+  margin: 0 0 1rem 1.5rem;
+  text-align: center;
+}
+
+.classmate-illustration svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.classmate-illustration figcaption {
+  color: var(--muted-ink);
+  font-size: 0.85rem;
+}
+
+.classmate-status {
+  color: var(--muted-ink);
+}
+
+.classmate-card {
+  margin: 1.25rem 0;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--copper);
+  /* White separates each classmate profile from the pale page background. */
+  background: #fff;
+}
+
+.classmate-card-title {
+  margin: 0.75rem 0 0.25rem;
+  color: var(--forest);
+}
+
+.classmate-photo {
+  max-width: 16rem;
+  margin: 0;
+}
+
+.classmate-photo img {
+  display: block;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  background: var(--leaf);
+}
+
+.classmate-photo figcaption,
+.classmate-mascot {
+  color: var(--muted-ink);
+  font-size: 0.9rem;
+}
+
+.classmate-card blockquote {
+  margin-bottom: 0;
+}
+
 main p {
   max-width: 68ch;
 }
@@ -176,6 +263,21 @@ footer p {
   margin: 0.25rem 0;
 }
 
+.profile-links {
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.profile-links ul {
+  justify-content: center;
+  gap: 0.4rem 1rem;
+}
+
+.profile-links a,
+.profile-links a:visited {
+  color: #8c3d25;
+}
+
 form {
   display: block;
 }
@@ -195,20 +297,10 @@ legend {
   font-weight: 700;
 }
 
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-md);
-}
-
 .field-wrap {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
-}
-
-.field-span-full {
-  grid-column: 1 / -1;
 }
 
 label {
@@ -266,11 +358,6 @@ button:focus-visible {
   margin-top: 1rem;
 }
 
-.course-list {
-  display: grid;
-  gap: var(--space-md);
-}
-
 .form-image {
   display: flex;
   align-items: center;
@@ -291,10 +378,7 @@ button:focus-visible {
 }
 
 .course-row {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
-  gap: var(--space-sm);
-  align-items: end;
+  margin-bottom: var(--space-md);
   padding: 1rem;
   border: 1px solid var(--line);
   border-radius: 0.75rem;
@@ -305,14 +389,6 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
-}
-
-.course-title-field {
-  grid-column: span 1;
-}
-
-.course-reason-field {
-  grid-column: span 1;
 }
 
 .remove-course {
@@ -355,11 +431,6 @@ cite {
 }
 
 @media (max-width: 38rem) {
-  .form-grid,
-  .course-row {
-    grid-template-columns: 1fr;
-  }
-
   .form-image {
     align-items: flex-start;
     flex-direction: column;

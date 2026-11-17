@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet classmates through introductions submitted to the ITIS 3135 introduction form.">
+  <title>Chingtzu Lee's Courageous Leopards | ITIS3135 | Classmate Introductions</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <h2 class="page-heading">Classmate Introductions</h2>
+    <!-- The div, classes, and IDs group the introduction status and responsive profile cards for styling and live updates. -->
+    <div class="classmate-intro">
+      <figure class="classmate-illustration">
+        <svg viewBox="0 0 120 90" aria-hidden="true" focusable="false">
+          <circle cx="60" cy="24" r="13" fill="#174a3a"></circle>
+          <circle cx="25" cy="34" r="10" fill="#b75b36"></circle>
+          <circle cx="95" cy="34" r="10" fill="#b75b36"></circle>
+          <path d="M37 82c0-17 9-28 23-28s23 11 23 28H37z" fill="#174a3a"></path>
+          <path d="M2 82c0-14 8-23 20-23 7 0 13 3 17 10-3 5-5 9-5 13H2zm99 0c0-4-2-8-5-13 4-7 10-10 17-10 12 0 20 9 20 23h-32z" fill="#b75b36"></path>
+        </svg>
+        <figcaption>Our classmate community</figcaption>
+      </figure>
+      <p>Get to know our ITIS 3135 classmates through their introductions. Profiles are loaded live from the introduction form and shown with each person's photo, name, mascot, personal statement, and favorite quote.</p>
+      <p id="classmate-status" class="classmate-status" role="status" aria-live="polite">Loading classmate introductions...</p>
+    </div>
+    <section id="classmate-list" class="classmate-list" aria-label="Classmate introduction profiles"></section>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="scripts/include.min.js"></script>
+  <script src="scripts/classmate-introductions.js"></script>
+</body>
+</html>

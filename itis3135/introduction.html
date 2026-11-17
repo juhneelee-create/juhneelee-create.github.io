@@ -4,25 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chingtzu Lee's Courageous Leopards | ITIS3135 | Introduction</title>
-  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
-  <link rel="stylesheet" href="../styles/default.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div data-include="header.html"></div>
+  <div data-include="components/header.html"></div>
 
   <main>
     <h2>Introduction</h2>
-    <img src="../images/frisbee-next-to-head@divonbriesen-300x300.jpg" alt="Photo of Chingtzu Lee" style="width:200px;border-radius:10px;">
+    <!-- The introduction-photo class sizes the portrait; the h6 rule styles the display name. -->
+    <h6>Chingtzu 'Chi' Lee ~ Courageous Leopard</h6>
+    <figure class="introduction-photo">
+      <img src="images/frisbee-next-to-head@divonbriesen-300x300.jpg" alt="Photo of Chingtzu Lee">
+      <figcaption>A cheerful portrait of Chi.</figcaption>
+    </figure>
     <p>Hey, I'm Chingtzu ~ Chi ~ Lee — a UNC Charlotte student studying ITIS 3135. I enjoy building clean, functional websites and learning how to make them look good while staying accessible and easy to navigate. Outside of class, I'm into coding, design, and exploring new tech tools that make life easier.</p>
     <p>This page is part of my official course site for ITIS 3135, following the structure and requirements outlined by Professor von Briesen.</p>
     <p><strong>Full name:</strong> Chingtzu M. Lee</p>
-    <p><strong>Acknowledgment:</strong> I understand that this is a public document, and I won't put anything here I wouldn't want anyone to see.</p>
     <p><strong>Acknowledgment date:</strong> 8/20/26</p>
     <p><strong>Preferred name:</strong> Chi</p>
     <p><strong>Mascot:</strong> Courageous Leopard</p>
-    <p><strong>Picture caption:</strong> A cheerful portrait of Chi.</p>
     <ul>
       <li><strong>Personal Background:</strong> I grew up in Charlotte and have spent most of my life building curiosity around technology, design, and creative problem solving.</li>
       <li><strong>Professional Background:</strong> I enjoy hands-on experiences that blend technology and communication, and I am always looking for ways to improve how people interact with digital tools.</li>
@@ -34,29 +38,25 @@
     </ul>
     <section>
       <h3>Courses</h3>
-      <ul>
-        <li><strong>ITIS</strong> 3135: Front-End Web Development — This class helps me turn design ideas into polished, usable websites.</li>
-        <li><strong>ITIS</strong> 2110: Introduction to Information Systems — It gives me a stronger foundation in digital systems and how people use them.</li>
-      </ul>
+      <ol>
+        <li><strong>Courses I'm Taking:</strong>
+          <ol>
+            <li><strong>ITIS</strong> 3135: <a href="contract.html">Front-End Web Development</a> — This class helps me turn design ideas into polished, usable websites.</li>
+            <li><strong>ITIS</strong> 2110: Introduction to Information Systems — It gives me a stronger foundation in digital systems and how people use them.</li>
+          </ol>
+        </li>
+      </ol>
     </section>
     <blockquote>
       “The best way to learn is to build, test, iterate, and make the details better each time.”
-      <cite>— Chingtzu Lee</cite>
+      <cite>- Chingtzu Lee</cite>
     </blockquote>
     <p><strong>Funny thing:</strong> I once tried to debug a small layout issue for so long that I started calling it a personal side quest.</p>
     <p><strong>Something I would like to share:</strong> I like combining technical problem solving with creativity, which is why I enjoy designing webpages that feel both useful and welcoming.</p>
-    <ul>
-      <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-      <li><a href="https://divonbriesen.github.io/teaching/itis3135/" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
-      <li><a href="https://divonbriesen.github.io/teaching/itis3135/" target="_blank" rel="noopener noreferrer">Course Resources</a></li>
-      <li><a href="https://www.freecodecamp.org" target="_blank" rel="noopener noreferrer">FreeCodeCamp</a></li>
-    </ul>
   </main>
 
-  <div data-include="footer.html"></div>
+  <div data-include="components/footer.html"></div>
 
-  <script src="../scripts/include.min.js"></script>
-  <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+  <script src="scripts/include.min.js"></script>
 </body>
 </html>

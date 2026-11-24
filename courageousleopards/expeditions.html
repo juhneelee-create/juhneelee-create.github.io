@@ -26,6 +26,28 @@
       <h3>Three Ways to Take the Scenic Route</h3>
       <p>A Pocket Expedition is a printed mini-guide for a roughly twenty-minute wander. It has a simple route, a few story prompts, and observation challenges that work for one person or a small group.</p>
       <p>Our first collection stays intentionally small, with three routes that can be enjoyed separately or traded with a friend:</p>
+      <div class="route-controls" aria-label="Filter expeditions by duration">
+        <button type="button" data-filter="all" aria-pressed="true">All routes</button>
+        <button type="button" data-filter="short" aria-pressed="false">15–20 minutes</button>
+        <button type="button" data-filter="long" aria-pressed="false">25–30 minutes</button>
+      </div>
+      <div class="route-list">
+        <article class="route-card" data-duration="short">
+          <h3>Corner-Circle</h3>
+          <p>Spot repeating shapes and unexpected curves on a quick neighborhood loop.</p>
+          <p><strong>Approximate length:</strong> 15–20 minutes</p>
+        </article>
+        <article class="route-card" data-duration="short">
+          <h3>Window Weather</h3>
+          <p>Notice reflections, colors, and shifting light along a public arcade.</p>
+          <p><strong>Approximate length:</strong> 15–20 minutes</p>
+        </article>
+        <article class="route-card" data-duration="long">
+          <h3>The Quiet Detour</h3>
+          <p>Find a calm public place to pause, listen, and sketch a sound in words.</p>
+          <p><strong>Approximate length:</strong> 25–30 minutes</p>
+        </article>
+      </div>
       <ul>
         <li><strong>Corner-Circle:</strong> spot repeating shapes and unexpected curves on a neighborhood loop.</li>
         <li><strong>Window Weather:</strong> notice reflections, colors, and shifting light along a public arcade.</li>
@@ -36,5 +58,6 @@
   </main>
   <div data-include="components/footer.html"></div>
   <script src="scripts/include.min.js"></script>
+  <script src="scripts/mascot.js"></script>
 </body>
 </html>

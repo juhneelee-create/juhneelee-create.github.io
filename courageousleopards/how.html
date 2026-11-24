@@ -31,9 +31,27 @@
         <li>Share one detail you noticed, then return the route card or pass it to a friend.</li>
       </ol>
       <p>Go with a companion if you like, check weather and accessibility before setting out, and turn back whenever you need. The best ending is getting home with a new story about a place you already knew.</p>
+      <form id="route-planner" class="route-planner">
+        <h3>Plan a Pocket Expedition</h3>
+        <p>Choose your time and pace, then let the route cabinet make a suggestion.</p>
+        <label for="available-time">Available time</label>
+        <select id="available-time" name="available-time">
+          <option value="short">15–20 minutes</option>
+          <option value="medium">20–25 minutes</option>
+          <option value="long">25–30 minutes</option>
+        </select>
+        <label for="walking-pace">Walking pace</label>
+        <select id="walking-pace" name="walking-pace">
+          <option value="energetic">Energetic</option>
+          <option value="easy">Easy and observant</option>
+        </select>
+        <button type="submit">Recommend a route</button>
+      </form>
+      <p id="route-result" class="route-result" aria-live="polite"></p>
     </section>
   </main>
   <div data-include="components/footer.html"></div>
   <script src="scripts/include.min.js"></script>
+  <script src="scripts/mascot.js"></script>
 </body>
 </html>

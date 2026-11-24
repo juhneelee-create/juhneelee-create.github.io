@@ -418,14 +418,17 @@ cite {
   margin-top: 2rem;
 }
 
-.generated-section pre {
+.generated-section textarea {
+  display: block;
   overflow: auto;
-  max-height: 32rem;
+  min-height: 22rem;
   padding: 1rem;
   border: 1px solid var(--line);
   border-radius: 0.5rem;
   background: #e4ebe5;
   color: var(--ink);
+  font-family: Consolas, monospace;
+  font-size: 0.9rem;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
